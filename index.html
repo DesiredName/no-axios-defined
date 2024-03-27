@@ -16,11 +16,12 @@
 
 <body>
     <article class="container">
-        <h3 class="title">JS superpowers need no AXIOS</h3>
+        <h3 class="title">JS superpowers - no AXIOS defined ♥️</h3>
 
         <div class="content">
-            You don't have to use AXIOS or any other library to define
-            hooks, middleware or global logger for network requests!
+            No need to use AXIOS or any other library to define
+            &gt;&gt; GLOBAL &lt;&lt;
+            hooks, middleware or loggers for network requests!
         </div>
 
         <section class="buttons">
@@ -93,7 +94,7 @@
 
                 if (resource.includes('to_log_before')) {
                     alert('This route was logged before submission\n\nheaders:\n' + JSON.stringify(options.headers));
-                    console.dir(resource, options)
+                    console.dir(resource, options);
                 }
             }
 
@@ -102,7 +103,7 @@
             if (options?.method === 'POST') {
                 if (resource.includes('to_log_after')) {
                     alert('This route was logged after submission\n\nheaders:\n' + JSON.stringify(options.headers));
-                    console.dir(resource, options)
+                    console.dir(resource, options);
                 }
             }
 
@@ -144,6 +145,8 @@
                 headers: {
                     'X-Logged-Request': 'this request was logged before submission'
                 }
+            }).catch((ex) => {
+                // ignore
             });
         }
 
@@ -153,6 +156,8 @@
                 headers: {
                     'X-Logged-Request': 'this request was logged after submission'
                 }
+            }).catch((ex) => {
+                // ignore
             });
         }
 
